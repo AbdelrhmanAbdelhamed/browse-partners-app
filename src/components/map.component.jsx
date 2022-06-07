@@ -64,7 +64,6 @@ function MapComponent({ center = STARBUCKS_CAFE_CENTRAL_LONDON_COORDINATES, coor
                 path={pathFromCenter}
                 options={options}
             />
-            <></>
         </GoogleMap>
     ) : <></>
 }
