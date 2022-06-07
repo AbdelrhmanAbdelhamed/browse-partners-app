@@ -55,7 +55,7 @@ function MapComponent({ center = STARBUCKS_CAFE_CENTRAL_LONDON_COORDINATES, coor
 
     return isLoaded ? (
         <GoogleMap
-            id="marker-example"
+            id="polyine-map"
             mapContainerStyle={mapContainerStyle}
             zoom={14}
             center={center}
