@@ -1,6 +1,6 @@
 import { useMemo, useEffect, useState } from "react";
 
-import useAxios from "./useAxios";
+import useAxios from "../hooks/use-axios.hook";
 
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
@@ -10,7 +10,7 @@ import DescriptionIcon from '@mui/icons-material/Description';
 
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-import Partner from "./Partner";
+import PartnerComponent from "./partner.component";
 
 const skeletonLoadingPartner = {
   "id": 4,
@@ -47,7 +47,7 @@ export default function PartnerList({ range }) {
   }, [data?.response])
 
   const skeletonList = [...Array(2)].map((_, index) => <Skeleton key={index} margin='5' variant="rectangular" width="100 %">
-    < Partner partner={skeletonLoadingPartner} />
+    < PartnerComponent partner={skeletonLoadingPartner} />
   </Skeleton >)
 
   const errorMessage = !loading && error && <Typography gutterBottom variant="h4" component="h4" color="error">
@@ -59,7 +59,7 @@ export default function PartnerList({ range }) {
   </Typography>
 
   const partnerList = partners.map(partner => (
-    <Partner key={partner.id} partner={partner} />
+    <PartnerComponent key={partner.id} partner={partner} />
   ))
 
   return <InfiniteScroll

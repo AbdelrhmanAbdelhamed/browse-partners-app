@@ -2,8 +2,8 @@ import { useState } from 'react';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 
-import RangeInput from './RangeInput';
-import PartnerList from './PartnerList';
+import RangeInput from '../components/range-input.component';
+import PartnerList from '../components/partner-list.component';
 
 export default function PartnersPage() {
   const [range, setRange] = useState(0.0);

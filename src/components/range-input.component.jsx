@@ -7,7 +7,7 @@ function formatValue(value) {
     return value ? `Distance less than ${value} KM` : `Slide to narrow the distance!`;
 }
 
-export default function RangeSlider({ onValueChange, defaultValue }) {
+export default function RangeInput({ onValueChange, defaultValue }) {
     const [value, setValue] = useState(defaultValue);
     const debounce = useDebouncedCallback((newValue) => {
         onValueChange(newValue);  

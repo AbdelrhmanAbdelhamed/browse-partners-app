@@ -4,7 +4,10 @@ import purple from '@mui/material/colors/purple';
 import green from '@mui/material/colors/green';
 import grey from '@mui/material/colors/grey';
 import Container from '@mui/material/Container';
-import PartnersPage from './PartnersPage'
+
+import "./App.css";
+
+import PartnersPage from './pages/partners.page'
 
 const theme = createTheme({
   components: {

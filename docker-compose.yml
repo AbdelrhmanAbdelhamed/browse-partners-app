@@ -1,7 +1,7 @@
 version: "3.9"
 
 services:
-  app:
+  browse-partners-app:
     container_name: browse-partners-app
     image: browse-partners-app
     build:
